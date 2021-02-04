@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap1.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <title>Calculator</title>
+
+</head>
+<style>
+    body {
+        background-color: #eaebec;
+    }
+
+    div {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+        width: 400px;
+        height: 600px;
+        background-color: #3a4655;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+    }
+
+    div:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
+    }
+
+</style>
+
+<body>
+    <div>
+        <div class="container-fluid">
+            <h3 style="text-align: right;color: #fff;" id="full">&nbsp;</h3>
+            <hr>
+            <h1 style="text-align: right;color: #fff;" id="current">0</h1>
+            <br>
+
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="%">%</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 ce" style="height: 50px;width: 50px;font-size:18px;">CE</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 c" style="height: 50px;width: 50px;font-size:18px;">C</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 back" style="height: 50px;width: 50px;font-size:18px;">&#8592;</button>
+            <button type="button" class="btn btn-success p-4 m-3 solve" style="height: 50px;width: 50px;font-size:18px;">=</button><br>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="7">7</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="8">8</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="9">9</button>
+            <button type="button" class="btn btn-warning p-4 m-3 add" style="height: 50px;width: 50px;font-size:18px;" id="/">&#247;</button>
+            <br>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="4">4</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="5">5</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="6">6</button>
+            <button type="button" class="btn btn-warning p-4 m-3 add" style="height: 50px;width: 50px;font-size:18px;" id="*">&#215;</button>
+            <br>
+            <button type="button" class="btn btn-secondary p-4 m-3" style="height: 50px;width: 50px;font-size:18px;" id="1">1</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="2">2</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="3">3</button>
+            <button type="button" class="btn btn-warning p-4 m-3 add" style="height: 50px;width: 50px;font-size:18px;" id="-">&#8722;</button>
+            <br>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;">&#177;</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id="0">0</button>
+            <button type="button" class="btn btn-secondary p-4 m-3 button" style="height: 50px;width: 50px;font-size:18px;" id=".">.</button>
+            <button type="button" class="btn btn-warning p-4 m-3 add" style="height: 50px;width: 50px;font-size:18px;" id="&#43;">&#43;</button>
+        </div>
+        <input type="text">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/g/jquery@2.1.4,jquery.migrate@1.4.1,bootstrap@3.3.7,jquery.matchheight@0.7.0,jquery.owlcarousel@1.31"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js"></script>
+    <script src="https://use.fontawesome.com/826a7e3dce.js"></script>
+
+    <script>
+        var full = '';
+        var current = '';
+
+        $("button.button").click(function() {
+            current += this.id;
+            full += this.id;
+            
+            $('h1').text(current);
+        });
+
+        $("button.c").click(function() {
+            current = '';
+            $('h1').text(0);
+        });
+
+        $("button.ce").click(function() {
+            current = '';
+            full = '';
+            $('h3').text(0);
+            $('h1').text(0);
+        });
+
+        $("button.back").click(function() {
+            var te = document.getElementById("current").innerHTML;
+            var te1 = te.slice(0, -1);
+            current = te1;
+            $('h1').text(te1);
+        });
+
+
+        $("button.add").click(function() {
+            let x = document.getElementById("current").innerHTML;
+            if (x.includes("+") || x.includes("-") || x.includes("*") || x.includes("/") || x.includes("%")) {
+                try {
+                    let y = eval(x);
+                    current = y;
+                    $('h1').text(y);
+                    current += this.id;
+                    full += this.id;
+                    $('h3').text(full);
+                } catch (e) {
+                    if (e instanceof SyntaxError) {
+                        alert("Invalid Input");
+                    }
+                }
+            } else {
+                current += this.id;
+                $('h1').text(current);
+                full += this.id;
+                    $('h3').text(full);
+            }
+
+        });
+
+        $("button.solve").click(function() {
+            let x = document.getElementById("current").innerHTML;
+            try {
+                let y = eval(x);
+                current = y;
+                $('h1').text(y);
+            } catch (e) {
+                if (e instanceof SyntaxError) {
+                    alert("Invalid Syntax");
+                }
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
